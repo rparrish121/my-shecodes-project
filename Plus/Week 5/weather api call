@@ -1,0 +1,32 @@
+const axios = require("axios").default;
+
+let apiKey = "7e36930029c858b6aa50b205e0bada96";
+
+let apiUrl =
+  "https://api.openweathermap.org/data/2.5/weather?q=sydney&units=metric";
+
+function showSydney(response) {
+  console.log(response.data.main.temp);
+  let temperatureElement = document.querySelector("h1");
+  temperatureElement.innerHTML = `It is ${response.data.main.temp} degrees in Sydney`;
+}
+
+axios.get(`${apiUrl}&appid=${apiKey}`).then(showSydney);
+
+//notes
+
+const axios = require("axios").default;
+
+function showWeather(response) {
+  let h1 = document.querySelector("h1");
+  let temperature = Math.round(response.data.main.temp);
+  h1.innerHTML = `It is currently ${temperature}° in ${response.data.name}`;
+}
+
+function retrievePosition(position) {
+  let apiKey = "7e36930029c858b6aa50b205e0bada96";
+  let cityInput = position.coords.latitude;
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&units=metric&appid=${apiKey}`;
+  axios.get(url).then(showWeather);
+}
+

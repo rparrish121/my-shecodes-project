@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather App</title>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            What's the Weather?
+        </h1>
+        <form id="search">
+            <input id="cityGrab" type="text" placeholder="Type here..." />
+            <button type="submit" class="btn btn-secondary">Search</button>
+        </form>
+
+        <div class="row row-today">
+            <div class="col">
+                <span class="cityName" id="city">🌆 London</span></br>
+                <span class="datetime" id="changeTime"><strong>📅 Wednesday</strong>
+                    </br>⏰ 10:00</span>
+            </div>
+            <div class="col">
+                <strong>Temperature</strong></br>
+                <span id="temperatureNew"> 15° 🌡</span>
+            </div>
+            <div class="col">
+                <strong>Pollen Count</strong> </br>
+                Very High 🌼
+            </div>
+            <div class="col">
+                <strong>Precipitation</strong> </br>
+                5% 🌧
+            </div>
+        </div>
+        <div class="row row-five-day">
+            <div class="col">
+                <strong>Monday</strong> </br>
+                16° </br>
+                <img src="photos/cloudy.png" width=50px;>
+            </div>
+            <div class="col">
+                <strong>Tuesday</strong> </br>
+                16° </br>
+                <img src="photos/cloudy.png" width=50px;>
+            </div>
+            <div class="col">
+                <strong>Wednesday</strong> </br>
+                21° </br>
+                <img src="photos/sun.png" width=50px;>
+            </div>
+            <div class="col">
+                <strong>Thursday</strong> </br>
+                19° </br>
+                <img src="photos/sun.png" width=50px;>
+            </div>
+            <div class="col">
+                <strong>Friday</strong> </br>
+                25° </br>
+                <img src="photos/toast.png" width=50px;>
+            </div>
+        </div>
+    </div>
+    <script src="src/data.js"></script>
+</body>
+
+</html>
